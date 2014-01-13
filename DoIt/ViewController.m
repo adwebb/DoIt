@@ -12,7 +12,8 @@
 {
     
     __weak IBOutlet UITableView *myTableView;
-    NSMutableArray* items;
+    NSMutableArray *items;
+    NSMutableArray *itemColors;
     __weak IBOutlet UITextField *myTextField;
     BOOL isDoneEditing;
     __weak IBOutlet UIButton *editButton;
@@ -28,6 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     items = @[@"One",@"Two",@"Three"].mutableCopy;
+    itemColors = @[[UIColor blackColor], [UIColor blackColor], [UIColor blackColor]].mutableCopy;
     isDoneEditing = YES;
 }
 
@@ -40,6 +42,7 @@
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"myReuseIdentifier"];
     cell.textLabel.text =[items objectAtIndex:indexPath.row];
+    cell.textLabel.textColor = [itemColors objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -87,6 +90,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
         [items removeObjectAtIndex:deletePath.row];
+        [itemColors removeObjectAtIndex:deletePath.row];
         [myTableView reloadData];
     }
 }
@@ -94,33 +98,32 @@
 - (IBAction)onAddButtonPressed:(id)sender
 {
     [items addObject:myTextField.text];
+    [itemColors addObject:[UIColor blackColor]];
     [myTableView reloadData];
     [myTextField resignFirstResponder];
     myTextField.text = @"";
 }
 
 -(IBAction)onSwipeRight:(UISwipeGestureRecognizer *)swipeGestureRecognizer {
-    NSLog(@"test");
     CGPoint location = [swipeGestureRecognizer locationInView:myTableView];
     NSIndexPath *indexPath = [myTableView indexPathForRowAtPoint:location];
     
     if(indexPath){
-        UITableViewCell * cell = (UITableViewCell *)[myTableView cellForRowAtIndexPath:indexPath];
-        [self increasePriority:cell];
+        [self increasePriority:indexPath];
     }
 }
 
--(void)increasePriority:(UITableViewCell *)cell {
+-(void)increasePriority:(NSIndexPath *)indexPath {
     int currentPriority;
     NSArray *priorityColors = @[[UIColor blackColor], [UIColor greenColor], [UIColor yellowColor], [UIColor redColor]];
   
     for (int i = 0; i < priorityColors.count; i++) {
-        if (cell.textLabel.textColor == [priorityColors objectAtIndex:i]) {
+        if (itemColors[indexPath.row] == [priorityColors objectAtIndex:i]) {
             currentPriority = i;
         }
     }
-
-    cell.textLabel.textColor = priorityColors[(currentPriority+1) % 4];
+    [itemColors setObject:(priorityColors[(currentPriority+1) % 4]) atIndexedSubscript:indexPath.row];
+    [myTableView reloadData];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
