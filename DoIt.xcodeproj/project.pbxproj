@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18FDA4121884996500DED341 /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FDA4111884996500DED341 /* CheckMate.framework */; };
 		C27D5374188476E0002C58BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27D5373188476E0002C58BB /* Foundation.framework */; };
 		C27D5376188476E0002C58BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27D5375188476E0002C58BB /* CoreGraphics.framework */; };
 		C27D5378188476E0002C58BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27D5377188476E0002C58BB /* UIKit.framework */; };
@@ -21,7 +22,6 @@
 		C27D5395188476E0002C58BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27D5377188476E0002C58BB /* UIKit.framework */; };
 		C27D539D188476E0002C58BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C27D539B188476E0002C58BB /* InfoPlist.strings */; };
 		C27D539F188476E0002C58BB /* DoItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C27D539E188476E0002C58BB /* DoItTests.m */; };
-		C27D53A9188486FE002C58BB /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27D53A8188486FE002C58BB /* CheckMate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18FDA4111884996500DED341 /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CheckMate.framework; path = ../../CheckMate.framework; sourceTree = "<group>"; };
 		C27D5370188476E0002C58BB /* DoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27D5373188476E0002C58BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C27D5375188476E0002C58BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,7 +55,6 @@
 		C27D539A188476E0002C58BB /* DoItTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoItTests-Info.plist"; sourceTree = "<group>"; };
 		C27D539C188476E0002C58BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C27D539E188476E0002C58BB /* DoItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoItTests.m; sourceTree = "<group>"; };
-		C27D53A8188486FE002C58BB /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CheckMate.framework; path = ../CheckMate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C27D53A9188486FE002C58BB /* CheckMate.framework in Frameworks */,
+				18FDA4121884996500DED341 /* CheckMate.framework in Frameworks */,
 				C27D5376188476E0002C58BB /* CoreGraphics.framework in Frameworks */,
 				C27D5378188476E0002C58BB /* UIKit.framework in Frameworks */,
 				C27D5374188476E0002C58BB /* Foundation.framework in Frameworks */,
@@ -104,7 +104,7 @@
 		C27D5372188476E0002C58BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C27D53A8188486FE002C58BB /* CheckMate.framework */,
+				18FDA4111884996500DED341 /* CheckMate.framework */,
 				C27D5373188476E0002C58BB /* Foundation.framework */,
 				C27D5375188476E0002C58BB /* CoreGraphics.framework */,
 				C27D5377188476E0002C58BB /* UIKit.framework */,
@@ -384,7 +384,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/aw/Desktop/MM,
+					/Users/apple/Documents/MobileMakers,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DoIt/DoIt-Prefix.pch";
@@ -401,7 +401,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/aw/Desktop/MM,
+					/Users/apple/Documents/MobileMakers,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DoIt/DoIt-Prefix.pch";
@@ -472,6 +472,7 @@
 				C27D53A4188476E0002C58BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C27D53A5188476E0002C58BB /* Build configuration list for PBXNativeTarget "DoItTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +481,7 @@
 				C27D53A7188476E0002C58BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

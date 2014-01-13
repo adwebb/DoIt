@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A59FF1BC-452A-4CC5-BDA2-968D47D99E4C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DoIt</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BD19B1E0-B97B-46FB-B435-DC1B3C550E23</key>
+		<string>https://github.com/pmatthen/DoIt.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DoIt.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BD19B1E0-B97B-46FB-B435-DC1B3C550E23</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pmatthen/DoIt.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BD19B1E0-B97B-46FB-B435-DC1B3C550E23</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BD19B1E0-B97B-46FB-B435-DC1B3C550E23</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DoIt</string>
+		</dict>
+	</array>
+</dict>
+</plist>
